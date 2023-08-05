@@ -1,0 +1,416 @@
+
+body{
+    background-color: #222222;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* general */
+.title-section{
+    position: relative;
+    margin: 2% 0;
+}
+
+.title-section::before,
+.title-section::after {
+  content: '';
+  position: absolute;
+  top: 50%; /* Posicionamos las líneas en la mitad vertical del título */
+  width: 150%; /* Ancho de las líneas (puedes ajustarlo según tus preferencias) */
+  height: 2px; /* Altura de las líneas (puedes ajustarlo según tus preferencias) */
+  background-color: white; /* Color de las líneas (puedes ajustarlo según tus preferencias) */
+}
+
+.title-section::before {
+  left: 0; /* Línea izquierda */
+  transform: translateX(-130%); /* Centramos la línea izquierda al principio del título */
+}
+
+.title-section::after {
+  right: 0; /* Línea derecha */
+  transform: translateX(130%); /* Centramos la línea derecha al final del título */
+}
+
+.section-text{
+    padding: 0 15%;
+    text-align: center;
+}
+/* header */
+
+header{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+#video-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+}
+
+#video-container video{
+    width: 100%;
+    height: 100%;
+    filter: blur(3px);
+    object-fit: cover;
+    opacity: 0.7;
+    z-index: -1;
+}
+
+#initial-text{
+    position: absolute;
+    width: 90%;
+    height: 20vh;
+    font-size: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1%;
+    border-radius: 15px;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+#initial-text-change {
+    display: inline-block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#arrow-down {
+    position: absolute;
+    bottom: 20px; /* Ajusta la distancia desde abajo */
+    left: 50%; /* Coloca la imagen en el centro horizontalmente */
+    transform: translateX(-50%); /* Centra horizontalmente la imagen */
+    width: 40px; /* Ajusta el ancho de la imagen */
+    height: 40px; /* Ajusta la altura de la imagen */
+    opacity: 0.8;
+    animation: moveDown 2s infinite alternate; /* Animación para mover hacia abajo */
+}
+
+@keyframes moveDown {
+    0% {
+        transform: translateX(-50%) translateY(0); /* Posición inicial */
+    }
+    100% {
+        transform: translateX(-50%) translateY(20px); /* Posición final (20px hacia abajo) */
+    }
+}
+
+.menu {
+    position: absolute;
+    top: 20px; /* Ajusta la distancia desde la parte superior */
+    right: 20px; /* Ajusta la distancia desde la derecha */
+    background-color: #45454544;
+    color: #fff;
+    display: flex;
+    align-items: flex-end; /* Alinea el menú a la derecha */
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .menu-icon {
+    cursor: pointer;
+  }
+  
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: transform 1s;
+  }
+  
+  .menu-items {
+    list-style: none;
+    padding: 0;
+    display: none;
+  }
+  
+  .menu-items li {
+    padding: 10px;
+  }
+  
+  .menu-items li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .menu-items li a:hover {
+    text-decoration: underline;
+  }
+
+/* main */
+main{
+    width: 100%;
+}
+
+/* acerca */
+.about{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.about-cards-container{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+    margin-bottom: 5%;
+}
+
+#about-card-nl, #about-card-nuria{
+    width: 50%;
+    height: 700px;
+    border-radius: 20px;
+    background-color: rgb(64, 64, 64);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding:0 3%;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 0px 43px 8px rgba(0,0,0,0.75);
+}
+
+#about-card-nuria > h2{
+    font-size: 260%;
+}
+#about-card-nl img{
+    width: 40%;
+}
+
+/* Estilos para el contenedor de la imagen en about-card-nuria */
+.nuria-img-container {
+    position: absolute; /* Posición absoluta para superponer la imagen */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* La imagen inicialmente está oculta */
+    visibility: hidden; /* Ocultamos la imagen pero mantiene el espacio */
+    transition: opacity 0.5s, visibility 0.5s; /* Transición suave */
+}
+
+.nuria-img-container > img{
+    width: 100%;
+}
+
+#about-card-nuria:hover .nuria-img-container {
+    opacity: 1; /* Mostramos la imagen al hacer hover en about-card-nuria */
+    background-color: rgb(108, 108, 108);
+    border-radius: 20px;
+    visibility: visible; /* Hacemos visible la imagen */
+}
+
+#about-card-nl:hover, #about-card-nuria:hover {
+    background-color: rgb(108, 108, 108)
+}
+
+/* services */
+
+.services{
+    width: 100%;
+    height: 850px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: red;
+}
+
+.services-container{
+    width: 90%;
+    margin-bottom: 5%;
+    background-color: purple;
+    display: flex;
+    flex-direction: row;
+    padding: 1%;
+    
+}
+
+.services-cards-container{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.services-card{
+    background-color: pink;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+}
+.services-card > img{
+    width: 15%;
+    margin-bottom: 5%;
+}
+
+.services-card:hover{
+    background-color: #88ac26;
+    box-shadow: 0px 0px 47px 11px rgba(162,211,28,1);
+}
+
+.services-text-container{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    background-color: brown;
+    padding: 2%;
+}
+
+.service-text-container #text-explain{
+    width: 100%;
+    background-color: yellow;
+}
+
+/* projects */
+
+.projects{
+    width: 100%;
+    height: 850px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.wrapper {
+    margin-top: 3%;
+    display: flex;
+    width: 90%;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    width: 20%;
+    height: 160px;
+    border-radius: 15px;
+    padding: 1.5rem;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    transition: 0.4s ease-out;
+    margin-bottom: 5%;
+  }
+  
+  .card:hover {
+    transform: translateY(20px);
+  }
+  
+  .card:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+    transition: 0.5s;
+    opacity: 0;
+  }
+  
+  .card:hover:before {
+    opacity: 1;
+  }
+  
+  .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 15px;
+  }
+  
+  .card .info {
+    position: relative;
+    z-index: 3;
+    color: white;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.5s;
+  }
+  
+  .card:hover .info {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  
+  .card .info h1 {
+    margin: 0px;
+  }
+  
+  .card .info p {
+    letter-spacing: 1px;
+    font-size: 15px;
+    margin-top: 8px;
+  }
+  
+  .card .info button {
+    padding: 0.6rem;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    background: white;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s ease;
+  }
+  
+  .card .info button:hover {
+    background: dodgerblue;
+    color: white;
+  }
+
+/* contacto */
+
+.contact{
+    width: 100%;
+    height: 850px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: blue;
+}
+.cal-form-container{
+    width: 90%;
+    background-color: brown;
+    display: flex;
+    flex-direction: row;
+    
+}
