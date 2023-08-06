@@ -31,7 +31,7 @@
             </ul>
         </nav>
         <div id="initial-text">
-            <h1 id="initial-title">Hola soy</h1>
+            <h1 id="initial-title">Soy</h1>
             <h1 id="initial-text-change"></h1>
         </div>
         <a href=""><img src="media/img/arrow-down.svg" alt="" id="arrow-down"></a>
@@ -43,12 +43,10 @@
             <div class="about-cards-container">
                 <div id="about-card-nuria">
                     <h2>Nuria Liaño</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum ipsa commodi laudantium enim qui eaque deleniti, fugit expedita corrupti? Repudiandae sunt fugiat nulla vel laboriosam vitae tempore iure sequi enim!</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum ipsa commodi laudantium enim qui eaque deleniti, fugit expedita corrupti? Repudiandae sunt fugiat nulla vel laboriosam vitae tempore iure sequi enim!</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum ipsa commodi laudantium enim qui eaque deleniti, fugit expedita corrupti? Repudiandae sunt fugiat nulla vel laboriosam vitae tempore iure sequi enim!</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum ipsa commodi 
-                        laudantium enim qui eaque deleniti, fugit expedita corrupti? Repudiandae sunt fugiat 
-                        nulla vel laboriosam vitae tempore iure sequi enim!</p>
+                    <p>Nuria es una cántabra, amante del café y del metal, que empezó desde muy niña a trastear con ordenadores. De mente inquieta, siempre está ávida de conocimiento y disfruta al poner en práctica nuevos elementos. </p>
+                    <p>Gracias a su pasión por los ordenadores y las tecnologías, encontró su camino en el mundo laboral, formándose y trabajando para conseguir un puesto en el sector. Nuria pone toda su fuerza y su pasión en cada uno de los proyectos en los que trabaja, y eso se deja ver con facilidad en cada uno de ellos.</p>
+                    <p>Su sentido de ver el mundo y de la vida, le han llevado no sólo ha conseguir sus objetivos sino también a esforzarse por aprender siempre un poco más. Esa vena autodidacta le ha ayudado en su vida tanto personal como profesional.</p>
+                    <p>Nuria es un ejemplo de trabajo y esfuerzo a base de cafeína y buena música.</p>
                     <div class="nuria-img-container">
                         <img src="media/img/yo3.jpg" alt="">
                     </div>
@@ -78,7 +76,7 @@
                         <h1>Administración de sistemas</h1>
                         <img src="media/img/icons/sysadmin.svg" alt="tux linux">
                     </div>
-                    <div class="services-card" id="services-tw">
+                    <div class="services-card" id="services-doc">
                         <h1>Documentación</h1>
                         <img src="media/img/icons/notes.svg" alt="play twitch">
                     </div>
@@ -97,10 +95,10 @@
                 </div>
                 <div class="services-text-container">
                     <div id="text-explain"></div>
-                    <a href="#" target="_blank" rel="noopener noreferrer"><img src="" alt="link to web"></a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" id="linktoweb"><img src="" alt="" id="imglink"></a>
                     <div id="links-repos">
-                        <a href="#" target="_blank" rel="noopener noreferrer"><img src="" alt="github"></a>
-                        <a href="#" target="_blank" rel="noopener noreferrer"><img src="" alt="gitlab"></a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" id="repo-github"><img src="" alt="" id="ico-github"></a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" id="repo-gitlab"><img src="" alt="" id="ico-gitlab"></a>
                     </div>
                 </div>
             </div>
@@ -170,36 +168,56 @@
         <section class="contact" id="contact">
             <h1 class="title-section">Contacto</h1>
             <div class="cal-form-container">
-                <div class="calendar">
+                <div class="contact-info">
 
                 </div>
                 <div class="form">
                     <form id="contact-form">
-                        <label for="nombre">Nombre*</label>
-                        <input type="text" id="nombre" name="nombre" required><br><br>
+
+                        <input type="text" name="nombre" id="name" placeholder="NOMBRE">
+                        <input type="text" name="email" id="email" placeholder="EMAIL">
+                        <input type="text" name="asunto" id="asunto" placeholder="ASUNTO">
+                        <textarea name="mesage" id="mesage" cols="30" rows="10"></textarea>
+                        <div id="buttons-form">
+                            <button type="reset">Limpiar</button>
+                            <button type="submit">Enviar</button>
+                        </div>
+                        
+                        <!-- <div class="inputBox">
+                            <label>Nombre*</label>
+                            <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre"> 
+                        </div>
+                        
+                        <div class="inputBox">
+                            <label>Email*</label>
+                            <input type="email" id="email" name="email" required placeholder="tucorreo@correo.com">
+                        </div>
+
+                        <div class="inputBox">
+                            <label>Asunto*</label>
+                            <input type="text" id="asunto" name="asunto" required placeholder="Asunto">
+                        </div>
+
+                        <div class="inputBox">
+                            <label>Motivo de contacto</label>
+                            <select id="opciones" name="opciones">
+                            <option value="clases_asesoramiento">Clases Particulares</option>
+                            <option value="clases_asesoramiento">Asesoramiento académico</option>
+                            <option value="desarrollo_web">Desarrollo Web</option>
+                            <option value="mantenimiento">Mantenimiento de Equipos</option>
+                            <option value="venta_asesoramiento">Venta de equipos</option>
+                            <option value="venta_asesoramiento">Presupuestos de equipos</option>
+                            <option value="charleta">Charleta</option>
+                            </select>
+                        </div>
+                        <div class="inputBox">
+                            <label>Contenido del correo*</label>
+                            <textarea id="contenido" name="contenido" rows="15" cols="50" required></textarea>
+                        </div>
                     
-                        <label for="email">Email*</label>
-                        <input type="email" id="email" name="email" required><br><br>
-                    
-                        <label for="asunto">Asunto*</label>
-                        <input type="text" id="asunto" name="asunto" required><br><br>
-                    
-                        <label for="opciones">Motivo de contacto</label>
-                        <select id="opciones" name="opciones">
-                          <option value="clases_asesoramiento">Clases Particulares</option>
-                          <option value="clases_asesoramiento">Asesoramiento académico</option>
-                          <option value="desarrollo_web">Desarrollo Web</option>
-                          <option value="mantenimiento">Mantenimiento de Equipos</option>
-                          <option value="venta_asesoramiento">Venta de equipos</option>
-                          <option value="venta_asesoramiento">Presupuestos de equipos</option>
-                          <option value="charleta">Charleta</option>
-                        </select><br><br>
-                    
-                        <label for="contenido">Contenido del correo*</label>
-                        <textarea id="contenido" name="contenido" rows="4" cols="50" required></textarea><br><br>
-                    
-                        <button type="reset">Limpiar formulario</button>
-                        <button type="submit">Enviar</button>
+                        <input type="reset">Limpiar formulario<input/>
+                        <button type="submit">Enviar</button> -->
+                    </form>
                 </div>
             </div>
         </section>
