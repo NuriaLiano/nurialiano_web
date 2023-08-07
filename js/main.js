@@ -1,18 +1,8 @@
 addEventListener("load", function() {
     // Inicializar la primera palabra
     changeWordWithOpacityEffect();
-    // // Obtenemos el elemento #text-explain y todas las tarjetas .services-card
-    // const textExplain = document.getElementById('text-explain');
-    // const servicesCards = document.querySelectorAll('.services-card');
-
-    // // Agregamos el evento 'mouseenter' a cada tarjeta
-    // servicesCards.forEach(card => {
-    //     card.addEventListener('mouseenter', () => {
-    //         // Al hacer hover, actualizamos el contenido de #text-explain con el texto del atributo data-text
-    //         textExplain.textContent = card.getAttribute('data-text');
-    //     });
-    // });
     infoServices();
+    changeImgContactSocial()
 }, false);
 
 const wordsArray = ['Nuria Liaño', "profe", "sysadmin", "web developer", "de Cantabria", "metalera"];
@@ -51,6 +41,20 @@ function toggleMenu() {
     }
   }
 
+function changeImgContactSocial(){
+  const socialIcons = document.querySelectorAll('.social-img');
+
+  socialIcons.forEach(icon => {
+      icon.addEventListener('mouseover', () => {
+          icon.src = `media/img/icons/${icon.alt}-hover.svg`; // Cambia la imagen al pasar el cursor
+      });
+
+      icon.addEventListener('mouseout', () => {
+          icon.src = `media/img/icons/${icon.alt}.svg`; // Restaura la imagen original al quitar el cursor
+      });
+  });
+}
+
 function infoServices() {
       // Obtener todas las tarjetas
       const servicesCards = document.querySelectorAll(".services-card");
@@ -71,7 +75,7 @@ function infoServices() {
                 case 'services-sy':
                   document.getElementById("text-explain").textContent = "Administración de sistemas";
                   document.getElementById("linktoweb").href = "";
-                  document.getElementById("imglink").src = "media/img/icons/soon.svg";
+                  document.getElementById("imglink").src = "media/img/icons/website_soon.png";
                   document.getElementById("ico-github").src = "";
                   document.getElementById("ico-gitlab").src = "";
                   document.getElementById("repo-github").src = "";
@@ -89,7 +93,7 @@ function infoServices() {
                 case 'services-dw':
                   document.getElementById("text-explain").textContent = "Desarrollo Web";
                   document.getElementById("linktoweb").href = "";
-                  document.getElementById("imglink").src = "media/img/icons/soon.svg";
+                  document.getElementById("imglink").src = "media/img/icons/website_soon.png";
                   document.getElementById("ico-github").src = "";
                   document.getElementById("ico-gitlab").src = "";
                   document.getElementById("repo-github").src = "";
@@ -98,7 +102,7 @@ function infoServices() {
                 case 'services-me':
                   document.getElementById("text-explain").textContent = "Mantenimiento y reparación de equipos";
                   document.getElementById("linktoweb").href = "";
-                  document.getElementById("imglink").src = "media/img/icons/soon.svg";
+                  document.getElementById("imglink").src = "media/img/icons/website_soon.png";
                   document.getElementById("ico-github").src = "";
                   document.getElementById("ico-gitlab").src = "";
                   document.getElementById("repo-github").src = "";
@@ -107,7 +111,7 @@ function infoServices() {
                 case 'services-ve':
                   document.getElementById("text-explain").textContent = "Venta de equipos informáticos";
                   document.getElementById("linktoweb").href = "";
-                  document.getElementById("imglink").src = "media/img/icons/soon.svg";
+                  document.getElementById("imglink").src = "media/img/icons/website_soon.png";
                   document.getElementById("ico-github").src = "";
                   document.getElementById("ico-gitlab").src = "";
                   document.getElementById("repo-github").src = "";
