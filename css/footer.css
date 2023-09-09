@@ -1,0 +1,73 @@
+/* footer */
+
+footer{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .footer-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .legal-links, .developer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .legal-links{
+    gap: 100px;
+  }
+  
+  .legal-links a{
+    color: #A2D31C;
+    text-decoration: none;
+    font-size: 19px;
+  }
+  
+  .legal-links a:hover{
+    color: #def897;
+  }
+  
+  .developer{
+    gap: 5px; /*este gap es para separar el texto de desarrollado por nuria liano */
+  }
+  
+  .developer span{
+    color: #A2D31C;
+  }
+  
+  .dev-imgs, .location{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .dev-imgs #beer{
+    width: 30px;
+    height: auto;
+  }
+  
+  .dev-imgs #metal{
+    width: 20px;
+    height: auto;
+  }
+  
+  .location{
+    gap: 10px;
+    margin-left: 10px;
+  }
+  
+  .location #cantabria{
+    width: 50px;
+  }

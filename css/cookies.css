@@ -1,0 +1,50 @@
+html{
+    scroll-behavior: smooth;
+    overflow-behavior: smooth; /* Agregar esta propiedad para navegadores que la admitan */
+}
+  
+body{
+    background-color: #222222;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    padding: 2%;
+    overscroll-behavior-y: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    font-weight: lighter;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+main, header{
+    width: 80%;
+}
+header > a {
+    display: flex;
+    justify-content: center;
+}
+header > a > img{
+    width: 35%;
+}
+#title-big{
+    font-size: 50px;
+
+}
+#link-list > li > a{
+    text-decoration: none;
+    color: white;
+}
+#link-list > li > a:hover{
+    color: #A2D31C;
+}
