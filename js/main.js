@@ -71,8 +71,8 @@ function infoServices() {
                   document.getElementById("imglink").src = "media/img/7AC943_black_transparent.png";
                   document.getElementById("ico-github").src = "media/img/icons/github.svg";
                   document.getElementById("ico-gitlab").src = "media/img/icons/gitlab.svg";
-                  document.getElementById("repo-github").src = "https://gitlab.com/Nuria_Liano/skilly";
-                  document.getElementById("repo-gitlab").src = "https://github.com/NuriaLiano/skilly";
+                  document.getElementById("repo-github").href = "https://github.com/NuriaLiano/skilly";
+                  document.getElementById("repo-gitlab").href = "https://gitlab.com/Nuria_Liano/skilly";
                   break
                 case 'services-sy':
                   document.getElementById("title-text-services").textContent = "Administración de sistemas";
@@ -81,8 +81,8 @@ function infoServices() {
                   document.getElementById("imglink").src = "media/img/icons/website_soon.png";
                   document.getElementById("ico-github").src = "";
                   document.getElementById("ico-gitlab").src = "";
-                  document.getElementById("repo-github").src = "";
-                  document.getElementById("repo-gitlab").src = "";
+                  document.getElementById("repo-github").href = "";
+                  document.getElementById("repo-gitlab").href = "";
                   break
                 case 'services-doc':
                   document.getElementById("title-text-services").textContent = "Documentación";
@@ -91,8 +91,8 @@ function infoServices() {
                   document.getElementById("imglink").src = "media/img/logo_nuridocu_linea_blue.png";
                   document.getElementById("ico-github").src = "media/img/icons/github.svg";
                   document.getElementById("ico-gitlab").src = "media/img/icons/gitlab.svg";
-                  document.getElementById("repo-github").src = "https://gitlab.com/Nuria_Liano/nuridocu";
-                  document.getElementById("repo-gitlab").src = "https://github.com/NuriaLiano/nuridocu";
+                  document.getElementById("repo-github").href = "https://github.com/NuriaLiano/nuridocu";
+                  document.getElementById("repo-gitlab").href = "https://gitlab.com/Nuria_Liano/nuridocu";
                   break
                 case 'services-dw':
                   document.getElementById("title-text-services").textContent = "Desarrollo Web";
@@ -101,8 +101,8 @@ function infoServices() {
                   document.getElementById("imglink").src = "media/img/icons/website_soon.png";
                   document.getElementById("ico-github").src = "";
                   document.getElementById("ico-gitlab").src = "";
-                  document.getElementById("repo-github").src = "";
-                  document.getElementById("repo-gitlab").src = "";
+                  document.getElementById("repo-github").href = "";
+                  document.getElementById("repo-gitlab").href = "";
                   break
                 case 'services-me':
                   document.getElementById("title-text-services").textContent = "Mantenimiento y reparación de equipos";
@@ -112,8 +112,8 @@ function infoServices() {
                   document.getElementById("imglink").src = "media/img/icons/website_soon.png";
                   document.getElementById("ico-github").src = "";
                   document.getElementById("ico-gitlab").src = "";
-                  document.getElementById("repo-github").src = "";
-                  document.getElementById("repo-gitlab").src = "";
+                  document.getElementById("repo-github").href = "";
+                  document.getElementById("repo-gitlab").href = "";
                   break
                 case 'services-ve':
                   document.getElementById("title-text-services").textContent = "Venta de equipos de segunda mano";
@@ -122,8 +122,8 @@ function infoServices() {
                   document.getElementById("imglink").src = "media/img/icons/website_soon.png";
                   document.getElementById("ico-github").src = "";
                   document.getElementById("ico-gitlab").src = "";
-                  document.getElementById("repo-github").src = "";
-                  document.getElementById("repo-gitlab").src = "";
+                  document.getElementById("repo-github").href = "";
+                  document.getElementById("repo-gitlab").href = "";
                   break
               }
           });
