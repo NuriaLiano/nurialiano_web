@@ -200,11 +200,10 @@ main{
 }
 
 #about-card-nuria > h2{
-    font-size: 24px; /* Reducir el tamaño de fuente */
+    font-size: 45px; /* Reducir el tamaño de fuente */
 }
 #about-card-nuria > p{
     margin-bottom: 10px; /* Espacio inferior entre párrafos */
-    font-size: 14px; /* Reducir el tamaño de fuente */
 }
 #about-card-nl img{
     width: 60%; /* Ancho de imagen */
@@ -212,7 +211,7 @@ main{
 }
 
 /* Estilos para el contenedor de la imagen en about-card-nuria */
-.nuria-img-container {
+.nuria-img-container, .nurialiano-img-container {
     position: absolute; /* Posición absoluta para superponer la imagen */
     top: 0;
     left: 0;
@@ -226,12 +225,17 @@ main{
     transition: opacity 0.5s, visibility 0.5s; /* Transición suave */
 }
 
-.nuria-img-container > img{
+.nuria-img-container > img, .nurialiano-img-container > img {
     width: 100%;
     height: auto; /* Ajustar la altura automáticamente */
+    
 }
 
-#about-card-nuria:hover .nuria-img-container {
+.nurialiano-img-container > img{
+  border-radius: 20px;
+}
+
+#about-card-nuria:hover .nuria-img-container, #about-card-nl:hover .nurialiano-img-container {
     opacity: 1; /* Mostramos la imagen al hacer hover en about-card-nuria */
     background-color: rgb(108, 108, 108);
     border-radius: 20px;
