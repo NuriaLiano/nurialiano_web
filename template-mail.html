@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+  .container {
+    max-width: 50%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .logo {
+    margin: 20px 0;
+  }
+  h2{
+    display: flex;
+    gap: 1%;
+  }
+  .importante {
+    color: #94e41b;
+  }
+  .mensaje {
+    margin: 20px 0;
+  }
+  .mensaje p {
+    text-align: justify;
+  }
+  .mensaje-alumno{
+      display: flex;
+      background: rgb(220, 220, 220);
+      border-radius: 5px;
+  }
+  .mensaje-alumno p{
+      padding: 1%;
+  }
+  .linea{
+    margin-top: 5%;
+  }
+  .contacto{
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+  }
+  .correo, .numero{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .contacto-linea {
+    text-align: justify;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    gap: 1%;
+  }
+  
+
+</style>
+</head>
+<body>
+  <div class="container">
+    <h2>Hola <div class="importante"> {{ USERNAME }}</div>,</h2>
+    <div class="mensaje">
+      <p>Nos ponemos en contacto contigo porque hemos visto que nos contactaste a través de la plataforma {{ PLATAFORMA }} con el siguiente mensaje:</p>
+      <div class="mensaje-alumno">
+        <p>{{ MENSAJE DEL ALUMNO }}</p>
+      </div>
+    </div>
+    <div class="mensaje">
+      <p>Sin embargo, hasta la fecha, no hemos recibido respuesta de tu parte, 
+        y queremos asegurarnos de que has recibido nuestro mensaje y confirmar si aún estás interesado en empezar las clases.
+        Tu interés es importante para nosotros, y estamos aquí para responder a cualquier pregunta que puedas tener.</p>
+      <p>
+        Además queremos recordarte que <b class="importante">ofrecemos una videollamada gratuita y sin compromiso</b> con el/la profe para que puedas conocer más sobre nuestras clases y aclarar cualquier duda que tengas. Estamos aquí para ayudarte.
+      </p>
+      <p>Si aún estás interesado en nuestras clases o tienes alguna pregunta no dudes en responder a este mensaje o enviarnos un Whatsapp.
+         Por el contrario, si has cambiado de opinión, agradecemos que nos informes para que podamos actualizar nuestros registros.</p>
+    </div>
+    <div class="mensaje-final">
+        <p>Tenemos un lema: <b class="importante">¡No hay compromiso, solo oportunidades de crecimiento!</b> asi que eres completamente libre de entrar y salir cuando quieras, siempre te recibiremos con los brazos abiertos. </p>
+    </div>
+    <hr class="linea">
+    <div class="contacto">
+        <div class="contacto-linea">
+          <span>Puedes consultar más información en nuestra página web:</span>
+          <a href="https://www.skilly.es" class="importante">www.skilly.es</a>
+        </div>
+        <div class="contacto-linea">
+          <span>Escribir un correo a:</span>
+          <div class="correo importante">hola@skilly.es</div>
+        </div>
+        <div class="contacto-linea">
+          <span>O, si prefieres, puedes llamar a este número:</span>
+          <div class="numero importante">+34 662342621</div>
+        </div>
+  </div>
+</body>
+</html>
+
+

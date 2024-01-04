@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <script src="js/main.js"></script>
+    <script src="https://www.google.com/recaptcha/enterprise.js?render=6Lfozh0oAAAAAPHA3ELpG10aeq0OpxuSAbd4Pm9A"></script>
     <title>Nuria Liaño</title>
     <link rel="icon" href="media/img/icons/logo.ico" type="image/x-icon">
     <!-- responsive -->
@@ -205,16 +206,26 @@
                 </div>
                 
                 <div class="form">
-                    <form id="contact-form" method="post" action="php/send.php">
-                        <input type="text" name="nombre" id="name" placeholder="NOMBRE">
-                        <input type="text" name="email" id="email" placeholder="EMAIL">
-                        <input type="text" name="asunto" id="asunto" placeholder="ASUNTO">
-                        <textarea name="message" id="message" cols="30" rows="10" placeholder="TU MENSAJE"></textarea>
+                    <form id="contact-form" method="post">
+                        <a href="mailto:hola@nurialiano.com" class="btn-contact">
+                            <img src="media/img/icons/mail.svg" alt="correo">
+                            Contacta por email
+                        </a>
+                        <a href="https://cal.com/skilly/clase-inicial" class="btn-contact">
+                            <img src="media/img/icons/calendar.svg" alt="calendario" id="calendar-img">
+                            Reserva una clase gratuita de prueba
+                        </a>
+
+                        <!-- <input type="text" name="nombre" id="name" placeholder="NOMBRE*" required>
+                        <input type="text" name="email" id="email" placeholder="EMAIL*" required>
+                        <input type="text" name="asunto" id="asunto" placeholder="ASUNTO*" required>
+                        <textarea name="message" id="message" cols="30" rows="10" placeholder="TU MENSAJE*" required></textarea>
                         <div id="buttons-form">
                             <button type="reset">Limpiar</button>
                             <button type="submit">Enviar</button>
-                        </div>
-                    </form>
+                        </div>-->
+                    </form> 
+
                 </div>
             </div>
         </section>

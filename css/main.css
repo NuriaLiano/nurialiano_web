@@ -563,7 +563,25 @@ visibility: visible;
     border-radius: 0 5px 5px 0;
 }
 
-#contact-form input{
+#contact-form a{
+  text-decoration: none;
+  color: black;
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact-form a:hover{
+  text-decoration: underline;
+}
+
+#contact-form a #calendar-img{
+  width: 50px;
+}
+
+
+/* #contact-form input{
   width: 50%;
   height: 5%;
   border: none;
@@ -618,7 +636,7 @@ visibility: visible;
 
 #buttons-form button[type="reset"]{
   background-color: #b6d365;
-}
+} */
 
 /* footer */
 
